@@ -3,16 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "storagePrefix": {
-      "value": "contosodata$RANDOM"
+      "value": "contosodata"
     },
     "storageSKU": {
       "value": "Standard_GRS"
     },
     "appServicePlanName": {
-      "value": "contosoplan$RANDOM"
+      "value": "contosoplan"
     },
     "webAppName": {
-      "value": "contosowebapp$RANDOM"
+      "value": "contosowebapp"
     },
     "resourceTags": {
       "value": {
