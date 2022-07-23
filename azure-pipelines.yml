@@ -19,7 +19,7 @@ stages:
           azureResourceManagerConnection: 'Azure subscription 1(7c953ca0-54f1-4708-94c4-f3f93358482c)'
           subscriptionId: '7c953ca0-54f1-4708-94c4-f3f93358482c'
           action: 'Create Or Update Resource Group'
-          resourceGroupName: 'AzureResourceManager'
+          resourceGroupName: "AzureResourceManager$RANDOM"
           location: 'UK South'
           templateLocation: 'Linked artifact'
           csmFile: 'azuredeploy.json'
