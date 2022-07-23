@@ -8,11 +8,16 @@ trigger:
 
 pool: default  
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+  - task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Azure subscription 1(7c953ca0-54f1-4708-94c4-f3f93358482c)'
+    subscriptionId: '7c953ca0-54f1-4708-94c4-f3f93358482c'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'AzureResourceManager'
+    location: 'UK South'
+    templateLocation: 'Linked artifact'
+    csmFile: 'azuredeploy.json'
+    csmParametersFile: 'azuredeploy.parameters.json'
+    deploymentMode: 'Incremental'
